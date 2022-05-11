@@ -26,9 +26,12 @@ export const plane = createSlice({
     changeNavigation: (state, action) => {
       state.navigation = status[action.payload];
     },
+    changeThrust: (state, action) => {
+      state.thrust = state.thrust + action.payload;
+    },
   },
 });
 
-export const { switchEngine, changeNavigation } = plane.actions;
+export const { switchEngine, changeNavigation, changeThrust } = plane.actions;
 
 export default plane.reducer;
