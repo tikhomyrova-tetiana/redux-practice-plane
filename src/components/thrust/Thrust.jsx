@@ -1,12 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
 import { changeThrust } from "../../store/plane/slice";
-import { selectThrust } from "../../store/plane/selector";
+import { selectThrust} from "../../store/plane/selector";
 
 
 export const Thrust = () => {
   const dispatch = useDispatch()
   const thrust = useSelector(selectThrust)
-
 
   return (
     <div className='thrust'>

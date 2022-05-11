@@ -4,7 +4,6 @@ import { changeNavigation } from "../../store/plane/slice";
 
 export const Navigator = () => {
   const dispatch = useDispatch()
-  
 
   return (
     <select onChange={(event) => dispatch(changeNavigation(event.target.value))}>
