@@ -23,21 +23,12 @@ export const plane = createSlice({
       // state.engines["left"] = !state.engines["left"]; передаем ключ объекта
       state.engines[action.payload] = !state.engines[action.payload];
     },
-    // changeLeft: (state) => {
-    //   state.engines.left = !state.engines.left;
-    // },
-    // changeLeftCenter: (state) => {
-    //   state.engines.left_center = !state.engines.left_center;
-    // },
-    // changeRightCenter: (state) => {
-    //   state.engines.right_center = !state.engines.right_center;
-    // },
-    // changeRight: (state) => {
-    //   state.engines.right = !state.engines.right;
-    // },
+    changeNavigation: (state, action) => {
+      state.navigation = status[action.payload];
+    },
   },
 });
 
-export const { switchEngine } = plane.actions;
+export const { switchEngine, changeNavigation } = plane.actions;
 
 export default plane.reducer;
